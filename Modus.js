@@ -1,24 +1,27 @@
 function cariModus(arr) {
-    let saveNum = {};
-      let maxCount = 0;
-      let modus = [];
-    
-      for (let i = 0; i < arr.length; i++) {
-        let num = arr[i];
-        saveNum[num] = (saveNum[num] || 0) + 1;
-        if (saveNum[num] > maxCount) {
-          maxCount = saveNum[num];
-        }
+  let saveNum = {};
+    let maxCount = 0;
+    let modus = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      let num = arr[i];
+      saveNum[num] = (saveNum[num] || 0) + 1;
+      if (saveNum[num] > maxCount) {
+        maxCount = saveNum[num];
       }
-    
-      for (let num in saveNum) {
+    }
+  
+    for (let num in saveNum) {
         if (saveNum[num] === maxCount) {
           modus.push(num);
         }
-      }
-    
-      return modus;
+        if (maxCount === arr.length) {
+        modus = -1;
+        }
     }
+    return modus;   
+}
+    
     
   console.log(cariModus([10, 4, 5, 2, 4])); 
   console.log(cariModus([5, 10, 10, 6, 5])); 
