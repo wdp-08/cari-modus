@@ -24,5 +24,13 @@ function cariModus(data) {
 }
 
 
-let data = [10, 4, 5, 2, 4];
-console.log('Modus data: ', cariModus(data));
+let data1 = [10, 4, 5, 2, 4];
+let data2 = [5, 10, 10, 6, 5];
+let data3 = [10, 3, 1, 2, 5];
+let data4 = [1, 2, 3, 3, 4, 5];
+let data5 = [7, 7, 7, 7, 7];
+console.log('Modus data1: ', cariModus(data1));
+console.log('Modus data2: ', cariModus(data2));
+console.log('Modus data3: ', cariModus(data3));
+console.log('Modus data4: ', cariModus(data4));
+console.log('Modus data5: ', cariModus(data5));
