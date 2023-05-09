@@ -24,6 +24,9 @@ function cariModus(arr) {
             return -1;
         }
     }
+    if (countModus === 0) {
+        return -1;
+    }
     return arr[modus];
 }
 
